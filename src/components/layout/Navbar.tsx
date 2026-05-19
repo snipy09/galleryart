@@ -22,7 +22,7 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
+        className={`fixed top-0 left-0 right-0 z-[150] transition-all duration-700 ease-in-out ${
           scrolled 
             ? "py-4 bg-brand-cream/90 backdrop-blur-xl shadow-2xl border-b border-brand-gold/10" 
             : "py-8 bg-transparent"
@@ -87,7 +87,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[100] bg-brand-brown flex flex-col items-center justify-center p-6 lg:hidden"
+            className="fixed inset-0 z-[200] bg-brand-brown flex flex-col items-center justify-center p-6 lg:hidden"
           >
             <button 
               onClick={() => setMenuOpen(false)}
@@ -96,7 +96,7 @@ export default function Navbar() {
               <X size={32} />
             </button>
             
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-6 sm:space-y-8">
               {["Story", "Menu", "Experience", "Gallery", "Location"].map((item, idx) => (
                 <motion.a
                   key={item}
@@ -105,7 +105,7 @@ export default function Navbar() {
                   transition={{ delay: 0.1 + idx * 0.1 }}
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setMenuOpen(false)}
-                  className="text-4xl font-serif uppercase tracking-widest text-brand-cream hover:text-brand-gold transition-colors"
+                  className="text-3xl sm:text-4xl lg:text-5xl font-serif uppercase tracking-widest text-brand-cream hover:text-brand-gold transition-colors"
                 >
                   {item}
                 </motion.a>
@@ -116,7 +116,7 @@ export default function Navbar() {
                 transition={{ delay: 0.6 }}
                 href="#reservation"
                 onClick={() => setMenuOpen(false)}
-                className="mt-8 px-12 py-5 bg-brand-gold text-brand-brown uppercase tracking-[0.2em] text-xs font-bold"
+                className="mt-4 sm:mt-8 px-10 sm:px-12 py-4 sm:py-5 bg-brand-gold text-brand-brown uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold"
               >
                 Reserve a Table
               </motion.a>

@@ -56,7 +56,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-serif text-brand-brown leading-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-serif text-brand-brown leading-tight"
             >
               Beyond the <br />
               <span className="italic text-brand-gold">Ordinary Cafe</span>
@@ -99,7 +99,7 @@ export default function Experience() {
                 >
                   {exp.category}
                 </motion.span>
-                <h3 className="text-3xl md:text-4xl font-serif text-brand-cream mb-4 transition-transform duration-500 group-hover:-translate-y-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-cream mb-4 transition-transform duration-500 group-hover:-translate-y-2">
                   {exp.title}
                 </h3>
                 <div className="h-[1px] w-0 bg-brand-gold group-hover:w-full transition-all duration-700 mb-4"></div>

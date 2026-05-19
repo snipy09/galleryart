@@ -24,10 +24,10 @@ export default function Story() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Column - Images */}
-          <div className="lg:col-span-7 relative h-[600px] md:h-[800px]">
+          <div className="lg:col-span-7 relative h-[450px] sm:h-[600px] md:h-[800px]">
             <motion.div
               style={{ y: img1Y }}
-              className="absolute top-10 left-0 w-3/4 h-[70%] z-10 shadow-2xl"
+              className="absolute top-0 left-0 w-[85%] sm:w-3/4 h-[75%] z-10 shadow-2xl"
             >
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -43,7 +43,7 @@ export default function Story() {
 
             <motion.div
               style={{ y: img2Y }}
-              className="absolute bottom-10 right-0 w-1/2 h-[50%] z-20 shadow-xl border-8 border-brand-cream"
+              className="absolute bottom-0 right-0 w-3/5 sm:w-1/2 h-[55%] z-20 shadow-xl border-4 sm:border-8 border-brand-cream"
             >
               <div className="relative w-full h-full overflow-hidden bg-brand-beige">
                 <Image

@@ -16,21 +16,17 @@ export default function CustomCursor() {
 
     if (!cursor || !follower) return;
 
-    const onMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      
-      gsap.to(cursor, {
-        x: clientX,
-        y: clientY,
-        duration: 0.1,
-      });
+    // Use quickTo for smoother performance
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.1, ease: "power3" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.1, ease: "power3" });
+    const fxTo = gsap.quickTo(follower, "x", { duration: 0.5, ease: "power3" });
+    const fyTo = gsap.quickTo(follower, "y", { duration: 0.5, ease: "power3" });
 
-      gsap.to(follower, {
-        x: clientX,
-        y: clientY,
-        duration: 0.6,
-        ease: "power3.out",
-      });
+    const onMouseMove = (e: MouseEvent) => {
+      xTo(e.clientX);
+      yTo(e.clientY);
+      fxTo(e.clientX);
+      fyTo(e.clientY);
     };
 
     const onMouseDown = () => {

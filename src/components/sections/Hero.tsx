@@ -104,18 +104,18 @@ export default function Hero() {
 
         <h1
           ref={titleRef}
-          className="text-6xl md:text-8xl lg:text-9xl font-serif text-brand-cream mb-8 tracking-tighter leading-[0.9] text-balance"
+          className="text-[12vw] sm:text-[10vw] md:text-8xl lg:text-9xl font-serif text-brand-cream mb-8 tracking-tighter leading-[0.9] text-balance"
         >
           <div className="overflow-hidden py-2 block">
             {"Where Art".split("").map((char, i) => (
-              <span key={i} className="hero-reveal-char inline-block min-w-[0.2em]">
+              <span key={i} className="hero-reveal-char inline-block min-w-[0.1em]">
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}
           </div>
           <div className="overflow-hidden py-2 block">
             {"Meets Coffee".split("").map((char, i) => (
-              <span key={i} className="hero-reveal-char inline-block italic text-brand-gold/90 font-light min-w-[0.2em]">
+              <span key={i} className="hero-reveal-char inline-block italic text-brand-gold/90 font-light min-w-[0.1em]">
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}
@@ -126,7 +126,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 1.2 }}
-          className="text-brand-cream/70 text-lg md:text-2xl font-light max-w-2xl mb-14 text-balance leading-relaxed tracking-wide"
+          className="text-brand-cream/70 text-base sm:text-lg md:text-2xl font-light max-w-2xl mb-14 text-balance leading-relaxed tracking-wide px-4"
         >
           An immersive sanctuary where handcrafted flavors, artisan soul, and creative sparks ignite.
         </motion.p>

@@ -27,14 +27,14 @@ export default function Location() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch h-[600px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch min-h-[500px] lg:h-[600px]">
           {/* Map Reveal (Using a cinematic image as placeholder for map) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="lg:col-span-2 relative h-full w-full overflow-hidden group"
+            className="lg:col-span-2 relative h-[300px] lg:h-full w-full overflow-hidden group"
           >
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center filter grayscale contrast-125 opacity-80 group-hover:grayscale-0 transition-all duration-1000"></div>
             <div className="absolute inset-0 bg-brand-brown/40 group-hover:bg-brand-brown/10 transition-colors duration-1000"></div>

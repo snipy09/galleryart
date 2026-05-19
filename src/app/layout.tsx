@@ -28,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-brand-beige text-brand-brown noise-bg relative overflow-x-hidden`}
+        className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-brand-beige text-brand-brown relative overflow-x-hidden`}
       >
+        <div className="noise-bg" />
         <CustomCursor />
         <SmoothScrolling>
           {children}

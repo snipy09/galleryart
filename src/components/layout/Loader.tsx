@@ -29,7 +29,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         <motion.div
           exit={{ y: "-100%" }}
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-black cursor-wait"
+          className="fixed inset-0 z-[1000] flex items-center justify-center bg-brand-black cursor-wait"
         >
           <div className="relative flex flex-col items-center w-full max-w-xs md:max-w-md px-6">
             {/* Logo Reveal */}
